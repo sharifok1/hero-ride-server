@@ -19,8 +19,6 @@ async function run(){
   try {
     await client.connect();
     const database = client.db('HeroRider');
-    const RiderCollection = database.collection('RiderCollection');
-    const LearnerCollection = database.collection('LearnerCollection');
     const userCollection = database.collection('userCollection');
     // const myUserCollection = database.collection('users');
   
@@ -31,12 +29,7 @@ async function run(){
   res.json(result)
   console.log(result)
 })
- app.post('/LearnerCollection', async(req,res)=>{
-  const Learner= req.body;
-  const result = await LearnerCollection.insertOne(Learner);
-  res.json(result)
-  console.log(result)
-})
+
  //Get Metod  get all RiderCollection---------------------API--get all
  app.get('/userCollection', async(req, res)=>{
   const Rider = RiderCollection.find({});
