@@ -22,7 +22,7 @@ async function run(){
     const RiderCollection = database.collection('RiderCollection');
     const LearnerCollection = database.collection('LearnerCollection');
     // const myUserCollection = database.collection('users');
-    // console.log('database successfully coneted')
+  
  //Post method  Method (single document)-----------API--Post
  app.post('/RiderCollection', async(req,res)=>{
   const rider = req.body;
