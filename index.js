@@ -21,12 +21,13 @@ async function run(){
     const database = client.db('HeroRider');
     const RiderCollection = database.collection('RiderCollection');
     const LearnerCollection = database.collection('LearnerCollection');
+    const userCollection = database.collection('userCollection');
     // const myUserCollection = database.collection('users');
   
  //Post method  Method (single document)-----------API--Post
- app.post('/RiderCollection', async(req,res)=>{
-  const rider = req.body;
-  const result = await RiderCollection.insertOne(rider);
+ app.post('/userCollection', async(req,res)=>{
+  const user = req.body;
+  const result = await userCollection.insertOne(user);
   res.json(result)
   console.log(result)
 })
