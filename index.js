@@ -32,8 +32,8 @@ async function run(){
 
  //Get Metod  get all RiderCollection---------------------API--get all
  app.get('/userCollection', async(req, res)=>{
-  const Rider = RiderCollection.find({});
-  const result = await Rider.toArray();
+  const user = userCollection.find({});
+  const result = await user.toArray();
   res.send(result)
 })
   //
